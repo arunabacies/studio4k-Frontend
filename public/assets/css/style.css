@@ -1,0 +1,253 @@
+/*================================================================================
+	Item Name: Frest HTML Admin Template
+	Version: 1.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+.dropdown .dropdown-toggle::after{ display: none; }
+.select2{ width: 100% !important; }
+/****************** Project List ********************/
+.project_list .card-title small, .project_list .card-body small{ font-size: 12px; font-weight: 300; }
+.project_list .card-body .title{ font-size: 14px; font-weight: 500; }
+.project_list .card-body .desc{ font-size: 12px; font-weight: 300; }
+
+.table td .bx{ cursor: pointer; }
+
+.modal .modal-content .modal-header .modal-title{ font-weight: 700; }
+
+ /* Style buttons */
+ .buttonload {
+	background-color: #04AA6D; /* Green background */
+	border: none; /* Remove borders */
+	color: white; /* White text */
+	padding: 12px 16px; /* Some padding */
+	font-size: 16px /* Set a font size */
+  } 
+
+.generate-link-error {margin-left: 50px;
+color: red;
+font-weight: normal;
+display: none;}
+ .error {
+	color: #d90c02;
+	font-size: 1rem;
+ }
+ .alert-block {
+	 display: none;
+ }
+ .loader{
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	position: relative;
+	margin: 0 auto;
+  }
+  .loader-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(64, 62, 62, 0.75);
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 3;
+	display: none;
+  }
+  .loader-overlay .loader{ top: 50%; transform: translateY(-50%);}
+  .loader#loader-btn{ width: auto; height: auto; }
+  
+  /* LOADER 1 */
+  
+  #loader-1:before, #loader-1:after{
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+	border: 10px solid transparent;
+	border-top-color: #3498db;
+  }
+  
+  #loader-1:before{
+	z-index: 100;
+	animation: spin 1s infinite;
+  }
+  
+  #loader-1:after{
+	border: 10px solid #ccc;
+  }
+  
+  @keyframes spin{
+	0%{
+	  -webkit-transform: rotate(0deg);
+	  -ms-transform: rotate(0deg);
+	  -o-transform: rotate(0deg);
+	  transform: rotate(0deg);
+	}
+  
+	100%{
+	  -webkit-transform: rotate(360deg);
+	  -ms-transform: rotate(360deg);
+	  -o-transform: rotate(360deg);
+	  transform: rotate(360deg);
+	}
+  }
+  
+  /* LOADER 2 */
+  
+  #loader-2 span{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	background-color: #3498db;
+	margin: 35px 5px;
+  }
+  
+  #loader-2 span:nth-child(1){
+	animation: bounce 1s ease-in-out infinite;
+  }
+  
+  #loader-2 span:nth-child(2){
+	animation: bounce 1s ease-in-out 0.33s infinite;
+  }
+  
+  #loader-2 span:nth-child(3){
+	animation: bounce 1s ease-in-out 0.66s infinite;
+  }
+  
+  @keyframes bounce{
+	0%, 75%, 100%{
+	  -webkit-transform: translateY(0);
+	  -ms-transform: translateY(0);
+	  -o-transform: translateY(0);
+	  transform: translateY(0);
+	}
+  
+	25%{
+	  -webkit-transform: translateY(-20px);
+	  -ms-transform: translateY(-20px);
+	  -o-transform: translateY(-20px);
+	  transform: translateY(-20px);
+	}
+  }
+  
+  /* LOADER 3 */
+  
+  #loader-3:before, #loader-3:after{
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 0;
+	left: calc(50% - 10px);
+	background-color: #3498db;
+	animation: squaremove 1s ease-in-out infinite;
+  }
+  
+  #loader-3:after{
+	bottom: 0;
+	animation-delay: 0.5s;
+  }
+  
+  @keyframes squaremove{
+	0%, 100%{
+	  -webkit-transform: translate(0,0) rotate(0);
+	  -ms-transform: translate(0,0) rotate(0);
+	  -o-transform: translate(0,0) rotate(0);
+	  transform: translate(0,0) rotate(0);
+	}
+  
+	25%{
+	  -webkit-transform: translate(40px,40px) rotate(45deg);
+	  -ms-transform: translate(40px,40px) rotate(45deg);
+	  -o-transform: translate(40px,40px) rotate(45deg);
+	  transform: translate(40px,40px) rotate(45deg);
+	}
+  
+	50%{
+	  -webkit-transform: translate(0px,80px) rotate(0deg);
+	  -ms-transform: translate(0px,80px) rotate(0deg);
+	  -o-transform: translate(0px,80px) rotate(0deg);
+	  transform: translate(0px,80px) rotate(0deg);
+	}
+  
+	75%{
+	  -webkit-transform: translate(-40px,40px) rotate(45deg);
+	  -ms-transform: translate(-40px,40px) rotate(45deg);
+	  -o-transform: translate(-40px,40px) rotate(45deg);
+	  transform: translate(-40px,40px) rotate(45deg);
+	}
+  }
+  
+  /* LOADER 4 */
+  
+  #loader-4 span{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	background-color: #3498db;
+	margin: 35px 5px;
+	opacity: 0;
+  }
+  
+  #loader-btn span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background-color: #ffffff;
+	margin: 5px;
+	opacity: 0;
+  }
+  
+  #loader-4 span:nth-child(1), #loader-btn span:nth-child(1){
+	animation: opacitychange 1s ease-in-out infinite;
+  }
+  
+  #loader-4 span:nth-child(2), #loader-btn span:nth-child(2){
+	animation: opacitychange 1s ease-in-out 0.33s infinite;
+  }
+  
+  #loader-4 span:nth-child(3), #loader-btn span:nth-child(3){
+	animation: opacitychange 1s ease-in-out 0.66s infinite;
+  }
+  
+  @keyframes opacitychange{
+	0%, 100%{
+	  opacity: 0;
+	}
+  
+	60%{
+	  opacity: 1;
+	}
+  }
+
+  #user-datatable .dataTables_wrapper .row:nth-child(3),
+  #recording-datatable .dataTables_wrapper .row:nth-child(3),
+  #user-datatable .dataTables_wrapper .dataTables_length,
+  #recording-datatable .dataTables_wrapper .dataTables_length{ display: none; }
+  /*#user-datatable nav{ text-align: right; margin-top: 32px; margin-left:auto; }*/
+  #user-datatable .pagination,
+  #recording-datatable .pagination,
+  .project_list .pagination {margin-top:20px;}
+  #user-datatable .pagination p,
+  #recording-datatable .pagination p,
+  .project_list .pagination p{ color: #8A99B5;}
+  #user-datatable nav,
+  #recording-datatable nav,
+  .project_list nav { margin-left:auto; }
+  #user-datatable nav .flex .leading-5,
+  #recording-datatable nav .flex .leading-5,
+  .project_list nav .flex .leading-5 { border-color: #464D5C!important; color: #8A99B5; background-color: transparent !important; border: 1px solid #464D5C; font-weight: 600; line-height: 1.25; padding: .47rem .73rem !important; border-radius: .267rem; }
+  #user-datatable nav .flex a.leading-5,
+  #recording-datatable nav .flex a.leading-5,
+  .project_list nav .flex a.leading-5{ color: #5A8DEE !important; background-color: #070725 !important; margin-left: 1em !important; }
